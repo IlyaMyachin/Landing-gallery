@@ -38,7 +38,7 @@ let eventsSwiper = new Swiper('.swiper-events', {
       spaceBetween: 27,
     },
 
-    1600: {
+    1440: {
       slidesPerView:3,
       slidesPerGroup: 3,
       spaceBetween: 50,

@@ -1,8 +1,3 @@
-// const validation = new JustValidate('#form');
-// var selector = document.querySelector("input[type='tel']");
-// var im = new Inputmask("+7(999)-999-99-99");
-// im.mask(selector);
-
 const form = document.querySelector('#form');
 const telSelector = form.querySelector('input[type="tel"]');
 const inputMask = new Inputmask("+7(999)-999-99-99");

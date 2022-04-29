@@ -48,4 +48,4 @@ let gallerySwiper = new Swiper('.swiper-gallery', {
       spaceBetween: 50,
     }
   }
-  });
+})

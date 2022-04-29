@@ -1,14 +1,13 @@
 let projectsSwiper = new Swiper('.swiper-projects', {
   slidesPerView: 3,
   slidesPerGroup: 3,
-  maxBackfaceHiddenSlides: 0,
   keyboard: {
     enabled: true,
     onlyInViewport: true,
     pageUpDown: true,
   },
 
-  spaceBetween: 49.5,
+  spaceBetween: 50,
 
   navigation: {
   nextEl: '.swiper-projects__button--next',
@@ -17,9 +16,21 @@ let projectsSwiper = new Swiper('.swiper-projects', {
 
   breakpoints: {
     320: {
+      centerInsufficientSlides: true,
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: 21,
+      spaceBetween: 20,
+    },
+
+    577: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 35,
     },
 
     1024: {
