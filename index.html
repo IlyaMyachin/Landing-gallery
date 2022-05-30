@@ -487,7 +487,10 @@
           <div class="catalog__left-block" id="default" data-target="default">
             <article class="catalog__article article-catalog">
               <picture>
-                <img class="article-catalog__image" src="img/1920/catalog-image-default.jpg"
+                <source srcset="img/320/catalog-image-default-320.jpg" media="(max-width: 320px)">
+                <source srcset="img/768/catalog-image-default-768.jpg" media="(max-width: 768px)">
+                <source srcset="img/1024/catalog-image-default-1024.jpg" media="(max-width: 1024px)">
+                <img class="article-catalog__image" src="img/1920/catalog-image-default-1920.jpg"
                   alt="Информация о художнике отсутствует">
               </picture>
               <div class="article-catalog__default-block">
@@ -1222,7 +1225,7 @@
   <script src="libs/inputmask.min.js"></script>
   <script src="libs/just-validate.min.js"></script>
   <script src="js/validation-contacts.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=f861a42a-3ceb-41ef-8ba7-29f845c1105c&lang=ru_RU"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=f4927949-48a3-4602-b269-70151f04d7c9&lang=ru_RU"></script>
   <script src="js/contacts-map.js"></script>
 </body>
 
