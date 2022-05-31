@@ -5,6 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blanchard gallery. Createrd by Myachin Ilya.">
+  <title>Blanchard</title>
+
+  <link rel="preload" href="fonts/OpenSansBold.woff2" as="font">
+  <link rel="preload" href="fonts/OpenSansBold.woff" as="font">
+  <link rel="preload" href="fonts/OpenSansRegular.woff2" as="font">
+  <link rel="preload" href="fonts/OpenSansRegular.woff" as="font">
+  <link rel="preload" href="fonts/OpenSansSemiBold.woff2" as="font">
+  <link rel="preload" href="fonts/OpenSansSemiBold.woff" as="font">
+
   <link rel="icon" href="img/favicon.svg" type="image/svg">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
@@ -14,7 +24,32 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/media.css">
-  <title>Blanchard</title>
+
+  <script src="libs/lazyload.min.js"></script>
+  <script defer src="js/header-menu.js"></script>
+  <script defer src="js/header-search.js"></script>
+  <script defer src="libs/simplebar.min.js"></script>
+  <script defer src="js/dropdown.js"></script>
+  <script defer src="libs/choices.min.js"></script>
+  <script defer src="js/select-gallery.js"></script>
+  <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="js/slider-gallery.js"></script>
+  <script defer src="libs/graph-modal.min.js"></script>
+  <script defer src="js/modal.js"></script>
+  <script defer src="js/accordion-catalog.js"></script>
+  <script defer src="js/tabs-catalog.js "></script>
+  <script defer src="js/slider-events.js"></script>
+  <script defer src="js/slider-projects.js"></script>
+  <script defer src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script defer src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <script defer src="js/tooltip-projects.js"></script>
+  <script defer src="libs/inputmask.min.js"></script>
+  <script defer src="libs/just-validate.min.js"></script>
+  <script defer src="js/validation-contacts.js"></script>
+  <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=f4927949-48a3-4602-b269-70151f04d7c9"></script>
+  <!-- <script defer src="https://api-maps.yandex.ru/2.1/?apikey=f4927949-48a3-4602-b269-70151f04d7c9&lang=ru_RU"></script> -->
+  <script defer src="js/contacts-map.js"></script>
+
 </head>
 
 <body>
@@ -335,8 +370,8 @@
                 <source srcset="img/320/gallery-slider-img1-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/768/gallery-slider-img1-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/gallery-slider-img1-1024.jpg" media="(max-width: 1440px)">
-                <img class="swiper-gallery__image swiper-gallery__image--img"
-                  src="img/1920/gallery-slider-img1-1920.jpg" alt="Изображение первый слайд">
+                <img class="swiper-gallery__image swiper-gallery__image--img lazyload"
+                  data-src="img/1920/gallery-slider-img1-1920.jpg" alt="Изображение первый слайд">
               </picture>
             </button>
             <button class="swiper-slide swiper-gallery__slide" data-graph-path="second">
@@ -344,8 +379,8 @@
                 <source srcset="img/320/gallery-slider-img2-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/768/gallery-slider-img2-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/gallery-slider-img2-1024.jpg" media="(max-width: 1440px)">
-                <img class="swiper-gallery__image swiper-gallery__image--img"
-                  src="img/1920/gallery-slider-img2-1920.jpg" alt="Изображение второй слайд">
+                <img class="swiper-gallery__image swiper-gallery__image--img lazyload"
+                  data-src="img/1920/gallery-slider-img2-1920.jpg" alt="Изображение второй слайд">
               </picture>
             </button>
             <button class=" swiper-slide swiper-gallery__slide" data-graph-path="third">
@@ -353,8 +388,8 @@
                 <source srcset="img/320/gallery-slider-img3-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/768/gallery-slider-img3-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/gallery-slider-img3-1024.jpg" media="(max-width: 1024px)">
-                <img class="swiper-gallery__image swiper-gallery__image--img"
-                  src="img/1920/gallery-slider-img3-1920.jpg" alt="Изображение третий слайд">
+                <img class="swiper-gallery__image swiper-gallery__image--img lazyload"
+                  data-src="img/1920/gallery-slider-img3-1920.jpg" alt="Изображение третий слайд">
               </picture>
             </button>
             <button class="swiper-slide swiper-gallery__slide" data-graph-path="fourth">
@@ -362,8 +397,8 @@
                 <source srcset="img/320/gallery-slider-img4-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/768/gallery-slider-img4-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/gallery-slider-img4-1024.jpg" media="(max-width: 1024px)">
-                <img class="swiper-gallery__image swiper-gallery__image--img"
-                  src="img/1920/gallery-slider-img4-1920.jpg" alt="Изображение четвертый слайд">
+                <img class="swiper-gallery__image swiper-gallery__image--img lazyload"
+                  data-src="img/1920/gallery-slider-img4-1920.jpg" alt="Изображение четвертый слайд">
               </picture>
             </button>
             <button class="swiper-slide swiper-gallery__slide" data-graph-path="fifth">
@@ -371,9 +406,8 @@
                 <source srcset="img/320/gallery-slider-img5-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/768/gallery-slider-img5-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/gallery-slider-img5-1024.jpg" media="(max-width: 1024px)">
-                <img class="swiper-gallery__image swiper-gallery__image--img"
-                  src="img/1920/gallery-slider-img5-1920.jpg" alt="Изображение пятый слайд" data-title="Казимир Малевич"
-                  data-subtitle="-" data-meta="-" data-desc="Информация отсутствует">
+                <img class="swiper-gallery__image swiper-gallery__image--img lazyload"
+                  data-src="img/1920/gallery-slider-img5-1920.jpg" alt="Изображение пятый слайд">
               </picture>
             </button>
             <button class="swiper-slide swiper-gallery__slide" data-graph-path="sixth">
@@ -381,8 +415,8 @@
                 <source srcset="img/320/gallery-slider-img6-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/768/gallery-slider-img6-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/gallery-slider-img6-1024.jpg" media="(max-width: 1024px)">
-                <img class="swiper-gallery__image swiper-gallery__image--img"
-                  src="img/1920/gallery-slider-img6-1920.jpg" alt="Изображение шестой слайд">
+                <img class="swiper-gallery__image swiper-gallery__image--img lazyload"
+                  data-src="img/1920/gallery-slider-img6-1920.jpg" alt="Изображение шестой слайд">
               </picture>
             </button>
           </div>
@@ -403,7 +437,7 @@
           <div class="catalog__left-block" id="francesco-bonsignori" data-target="francesco-bonsignori">
             <article class="catalog__article article-catalog">
               <picture>
-                <img class="article-catalog__image" src="img/1920/catalog-francesco-bonsignori.jpg"
+                <img class="article-catalog__image lazyload" data-src="img/1920/catalog-francesco-bonsignori.jpg"
                   alt="Francesco Bonsignori">
               </picture>
               <h4 class="article-catalog__title">Франческо Бонсиньори</h4>
@@ -420,7 +454,7 @@
             data-target="domenico-ghirlandaio">
             <article class="catalog__article article-catalog">
               <picture>
-                <img class="article-catalog__image" src="img/1920/catalog-domenico-ghirlandaio.jpg"
+                <img class="article-catalog__image lazyload" data-src="img/1920/catalog-domenico-ghirlandaio.jpg"
                   alt="Domenico Ghirlandaio">
               </picture>
               <h4 class="article-catalog__title">Доменико Гирландайо</h4>
@@ -437,7 +471,7 @@
           <div class="catalog__left-block" id="giorgione" data-target="giorgione">
             <article class="catalog__article article-catalog">
               <picture>
-                <img class="article-catalog__image" src="img/1920/catalog-giorgione.jpg" alt="Giorgione">
+                <img class="article-catalog__image lazyload" data-src="img/1920/catalog-giorgione.jpg" alt="Giorgione">
               </picture>
               <h4 class="article-catalog__title">Джорджоне</h4>
               <span class="article-catalog__meta">1477/1478&nbsp;&mdash; 17&nbsp;сентября 1510</span>
@@ -456,7 +490,7 @@
           <div class="catalog__left-block" id="pietro-perugino" data-target="pietro-perugino">
             <article class="catalog__article article-catalog">
               <picture>
-                <img class="article-catalog__image" src="img/1920/catalog-pietro-perugino.jpg" alt="Pietro Perugino">
+                <img class="article-catalog__image lazyload" data-src="img/1920/catalog-pietro-perugino.jpg" alt="Pietro Perugino">
               </picture>
               <h4 class="article-catalog__title">Пьетро Перуджино</h4>
               <span class="article-catalog__meta">1446&ndash;1524</span>
@@ -472,7 +506,7 @@
           <div class="catalog__left-block" id="pinturicchio" data-target="pinturicchio">
             <article class="catalog__article article-catalog">
               <picture>
-                <img class="article-catalog__image" src="img/1920/catalog-pinturicchio.jpg" alt="Pinturicchio">
+                <img class="article-catalog__image lazyload" data-src="img/1920/catalog-pinturicchio.jpg" alt="Pinturicchio">
               </picture>
               <h4 class="article-catalog__title">Пинтуриккьо</h4>
               <span class="article-catalog__meta">1454&nbsp;&mdash; 11&nbsp;декабря 1513</span>
@@ -490,7 +524,7 @@
                 <source srcset="img/320/catalog-image-default-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/768/catalog-image-default-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/catalog-image-default-1024.jpg" media="(max-width: 1024px)">
-                <img class="article-catalog__image" src="img/1920/catalog-image-default-1920.jpg"
+                <img class="article-catalog__image lazyload" data-src="img/1920/catalog-image-default-1920.jpg"
                   alt="Информация о художнике отсутствует">
               </picture>
               <div class="article-catalog__default-block">
@@ -829,7 +863,7 @@
                 <source srcset="img/320/events-image-2-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/768/events-image-2-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/events-image-2-1024.jpg" media="(max-width: 1024px)">
-                <img class="swiper-events__image" src="img/1920/events-image-2-1920.jpg" alt="Изображение второй слайд">
+                <img class="swiper-events__image lazyload" data-src="img/1920/events-image-2-1920.jpg" alt="Изображение второй слайд">
               </picture>
               <article class="swiper-events__article">
                 <span class="swiper-events__meta">ММОМА<br>24&nbsp;марта 19:00</span>
@@ -845,7 +879,7 @@
                 <source srcset="img/320/events-image-3-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/768/events-image-3-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/events-image-3-1024.jpg" media="(max-width: 1024px)">
-                <img class="swiper-events__image" src="img/1920/events-image-3-1920.jpg" alt="Изображение третий слайд">
+                <img class="swiper-events__image lazyload" data-src="img/1920/events-image-3-1920.jpg" alt="Изображение третий слайд">
               </picture>
               <article class="swiper-events__article">
                 <span class="swiper-events__meta">Еврейский музей
@@ -861,7 +895,7 @@
                 <source srcset="img/320/events-image-4-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/768/events-image-4-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/events-image-4-1024.jpg" media="(max-width: 1024px)">
-                <img class="swiper-events__image" src="img/1920/events-image-4-1920.jpg"
+                <img class="swiper-events__image lazyload" data-src="img/1920/events-image-4-1920.jpg"
                   alt="Изображение четвертый слайд">
               </picture>
               <article class="swiper-events__article">
@@ -879,7 +913,7 @@
                 <source srcset="img/320/events-image-5-320.jpg" media="(max-width: 320px)">
                 <source srcset="img/768/events-image-5-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/events-image-5-1024.jpg" media="(max-width: 1024px)">
-                <img class="swiper-events__image" src="img/1920/events-image-5-1920.jpg" alt="Изображение пятый слайд">
+                <img class="swiper-events__image lazyload" data-src="img/1920/events-image-5-1920.jpg" alt="Изображение пятый слайд">
               </picture>
               <article class="swiper-events__article">
                 <span class="swiper-events__meta">Третьяковка на&nbsp;Крымском валу
@@ -945,31 +979,31 @@
         <div class="projects__swiper swiper-projects">
           <div class="swiper-wrapper swiper-projects__wrapper">
             <a class="swiper-slide swiper-projects__slide" href="#">
-              <img class="swiper-projects__image swiper-projects__image--1" src="img/1920/projects-image-1.jpg" alt="#">
+              <img class="swiper-projects__image swiper-projects__image--1 lazyload" data-src="img/1920/projects-image-1.jpg" alt="#">
             </a>
             <a class="swiper-slide swiper-projects__slide" href="#">
-              <img class="swiper-projects__image swiper-projects__image--2" src="img/1920/projects-image-2.jpg" alt="#">
+              <img class="swiper-projects__image swiper-projects__image--2 lazyload" data-src="img/1920/projects-image-2.jpg" alt="#">
             </a>
             <a class="swiper-slide swiper-projects__slide" href="#">
-              <img class="swiper-projects__image swiper-projects__image--3" src="img/1920/projects-image-3.jpg" alt="#">
+              <img class="swiper-projects__image swiper-projects__image--3 lazyload" data-src="img/1920/projects-image-3.jpg" alt="#">
             </a>
             <a class="swiper-slide swiper-projects__slide" href="#">
-              <img class="swiper-projects__image swiper-projects__image--4" src="img/1920/projects-image-4.jpg" alt="#">
+              <img class="swiper-projects__image swiper-projects__image--4 lazyload" data-src="img/1920/projects-image-4.jpg" alt="#">
             </a>
             <a class="swiper-slide swiper-projects__slide" href="#">
-              <img class="swiper-projects__image swiper-projects__image--5" src="img/1920/projects-image-5.jpg" alt="#">
+              <img class="swiper-projects__image swiper-projects__image--5 lazyload" data-src="img/1920/projects-image-5.jpg" alt="#">
             </a>
             <a class="swiper-slide swiper-projects__slide" href="#">
-              <img class="swiper-projects__image swiper-projects__image--6" src="img/1920/projects-image-6.jpg" alt="#">
+              <img class="swiper-projects__image swiper-projects__image--6 lazyload" data-src="img/1920/projects-image-6.jpg" alt="#">
             </a>
             <a class="swiper-slide swiper-projects__slide" href="#">
-              <img class="swiper-projects__image swiper-projects__image--7" src="img/1920/projects-image-7.jpg" alt="#">
+              <img class="swiper-projects__image swiper-projects__image--7 lazyload" data-src="img/1920/projects-image-7.jpg" alt="#">
             </a>
             <a class="swiper-slide swiper-projects__slide" href="#">
-              <img class="swiper-projects__image swiper-projects__image--8" src="img/1920/projects-image-8.jpg" alt="#">
+              <img class="swiper-projects__image swiper-projects__image--8 lazyload" data-src="img/1920/projects-image-8.jpg" alt="#">
             </a>
             <a class="swiper-slide swiper-projects__slide" href="#">
-              <img class="swiper-projects__image swiper-projects__image--9" src="img/1920/projects-image-9.jpg" alt="#">
+              <img class="swiper-projects__image swiper-projects__image--9 lazyload" data-src="img/1920/projects-image-9.jpg" alt="#">
             </a>
           </div>
           <button class="swiper-projects__button swiper-projects__button--prev">
@@ -1100,7 +1134,7 @@
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
       <div class="graph-modal__content content-graph-modal">
         <div class="content-graph-modal__left-block">
-          <img class="content-graph-modal__image" src="img/1920/gallery-slider-img1-1920.jpg"
+          <img class="content-graph-modal__image lazyload" data-src="img/1920/gallery-slider-img1-1920.jpg"
             alt="Изображение первый слайд">
         </div>
         <div class="content-graph-modal__right-block">
@@ -1120,7 +1154,7 @@
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
       <div class="graph-modal__content content-graph-modal">
         <div class="content-graph-modal__left-block">
-          <img class="content-graph-modal__image" src="img/1920/gallery-slider-img2-1920.jpg"
+          <img class="content-graph-modal__image lazyload" data-src="img/1920/gallery-slider-img2-1920.jpg"
             alt="Изображение второй слайд">
         </div>
         <div class="content-graph-modal__right-block">
@@ -1138,7 +1172,7 @@
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
       <div class="graph-modal__content content-graph-modal">
         <div class="content-graph-modal__left-block">
-          <img class="content-graph-modal__image" src="img/1920/gallery-slider-img3-1920.jpg"
+          <img class="content-graph-modal__image lazyload" data-src="img/1920/gallery-slider-img3-1920.jpg"
             alt="Изображение третий слайд">
         </div>
         <div class="content-graph-modal__right-block">
@@ -1156,7 +1190,7 @@
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
       <div class="graph-modal__content content-graph-modal">
         <div class="content-graph-modal__left-block">
-          <img class="content-graph-modal__image" src="img/1920/gallery-slider-img4-1920.jpg"
+          <img class="content-graph-modal__image lazyload" data-src="img/1920/gallery-slider-img4-1920.jpg"
             alt="Изображение четвертый слайд">
         </div>
         <div class="content-graph-modal__right-block">
@@ -1174,7 +1208,7 @@
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
       <div class="graph-modal__content content-graph-modal">
         <div class="content-graph-modal__left-block">
-          <img class="content-graph-modal__image" src="img/1920/gallery-slider-img5-1920.jpg"
+          <img class="content-graph-modal__image lazyload" data-src="img/1920/gallery-slider-img5-1920.jpg"
             alt="Изображение пятый слайд">
         </div>
         <div class="content-graph-modal__right-block">
@@ -1189,7 +1223,7 @@
       <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
       <div class="graph-modal__content content-graph-modal">
         <div class="content-graph-modal__left-block">
-          <img class="content-graph-modal__image" src="img/1920/gallery-slider-img6-1920.jpg"
+          <img class="content-graph-modal__image lazyload" data-src="img/1920/gallery-slider-img6-1920.jpg"
             alt="Изображение шестой слайд">
         </div>
         <div class="content-graph-modal__right-block">
@@ -1205,28 +1239,9 @@
     </div>
   </div>
 
-  <script src="js/header-menu.js"></script>
-  <script src="js/header-search.js"></script>
-  <script src="libs/simplebar.min.js"></script>
-  <script src="js/dropdown.js"></script>
-  <script src="libs/choices.min.js"></script>
-  <script src="js/select-gallery.js"></script>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script src="js/slider-gallery.js"></script>
-  <script src="libs/graph-modal.min.js"></script>
-  <script src="js/modal.js"></script>
-  <script src="js/accordion-catalog.js"></script>
-  <script src="js/tabs-catalog.js "></script>
-  <script src="js/slider-events.js"></script>
-  <script src="js/slider-projects.js"></script>
-  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-  <script src="js/tooltip-projects.js"></script>
-  <script src="libs/inputmask.min.js"></script>
-  <script src="libs/just-validate.min.js"></script>
-  <script src="js/validation-contacts.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=f4927949-48a3-4602-b269-70151f04d7c9&lang=ru_RU"></script>
-  <script src="js/contacts-map.js"></script>
+  <script>
+    lazyload();
+  </script>
 </body>
 
 </html>
