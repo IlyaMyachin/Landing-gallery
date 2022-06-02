@@ -8,12 +8,9 @@
   <meta name="description" content="Blanchard gallery. Created by Myachin Ilya.">
   <title>Blanchard</title>
 
-  <link rel="preload" href="fonts/OpenSansBold.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/OpenSansBold.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/OpenSansRegular.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/OpenSansRegular.woff" as="font" crossorigin>
-  <link rel="preload" href="fonts/OpenSansSemiBold.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/OpenSansSemiBold.woff" as="font" crossorigin>
+  <link rel="preload" href="fonts/OpenSansBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSansRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSansSemiBold.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="icon" href="img/favicon.svg" type="image/svg">
   <link rel="stylesheet" href="css/normalize.css">
@@ -42,6 +39,9 @@
   <script defer src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
   <script defer src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
   <script defer src="js/tooltip-projects.js"></script>
+  <script defer src="libs/inputmask.min.js"></script>
+  <script defer src="libs/just-validate.min.js"></script>
+  <script defer src="js/validation-contacts.js"></script>
   <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=f4927949-48a3-4602-b269-70151f04d7c9"></script>
   <script defer src="js/contacts-map.js"></script>
 
@@ -49,6 +49,7 @@
 
 <body>
   <header class="header">
+    <h1 class="visually-hidden">Художественная галлерея Blanchard</h1>
     <div class="container header__top-block">
       <button class="button header__burger" id="header__burger" aria-label="Меню">
         <span class="header__burger-line"></span>
@@ -362,25 +363,25 @@
           <div class="swiper-wrapper">
             <button class="swiper-slide swiper-gallery__slide" data-graph-path="first">
               <picture>
-                <source srcset="img/320/gallery-slider-img1-320.jpg" media="(max-width: 320px)">
+                <source srcset="img/320/gallery-slider-img1-320.jpg" media="(max-width: 576px)">
                 <source srcset="img/768/gallery-slider-img1-768.jpg" media="(max-width: 768px)">
-                <source srcset="img/1024/gallery-slider-img1-1024.jpg" media="(max-width: 1440px)">
+                <source srcset="img/1024/gallery-slider-img1-1024.jpg" media="(max-width: 1024px)">
                 <img class="swiper-gallery__image swiper-gallery__image--img"
                   src="img/1920/gallery-slider-img1-1920.jpg" alt="Изображение первый слайд">
               </picture>
             </button>
             <button class="swiper-slide swiper-gallery__slide" data-graph-path="second">
               <picture>
-                <source srcset="img/320/gallery-slider-img2-320.jpg" media="(max-width: 320px)">
+                <source srcset="img/320/gallery-slider-img2-320.jpg" media="(max-width: 576px)">
                 <source srcset="img/768/gallery-slider-img2-768.jpg" media="(max-width: 768px)">
-                <source srcset="img/1024/gallery-slider-img2-1024.jpg" media="(max-width: 1440px)">
+                <source srcset="img/1024/gallery-slider-img2-1024.jpg" media="(max-width: 1024px)">
                 <img class="swiper-gallery__image swiper-gallery__image--img"
                   src="img/1920/gallery-slider-img2-1920.jpg" alt="Изображение второй слайд">
               </picture>
             </button>
             <button class=" swiper-slide swiper-gallery__slide" data-graph-path="third">
               <picture>
-                <source srcset="img/320/gallery-slider-img3-320.jpg" media="(max-width: 320px)">
+                <source srcset="img/320/gallery-slider-img3-320.jpg" media="(max-width: 576px)">
                 <source srcset="img/768/gallery-slider-img3-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/gallery-slider-img3-1024.jpg" media="(max-width: 1024px)">
                 <img class="swiper-gallery__image swiper-gallery__image--img"
@@ -389,7 +390,7 @@
             </button>
             <button class="swiper-slide swiper-gallery__slide" data-graph-path="fourth">
               <picture>
-                <source srcset="img/320/gallery-slider-img4-320.jpg" media="(max-width: 320px)">
+                <source srcset="img/320/gallery-slider-img4-320.jpg" media="(max-width: 576px)">
                 <source srcset="img/768/gallery-slider-img4-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/gallery-slider-img4-1024.jpg" media="(max-width: 1024px)">
                 <img class="swiper-gallery__image swiper-gallery__image--img"
@@ -398,7 +399,7 @@
             </button>
             <button class="swiper-slide swiper-gallery__slide" data-graph-path="fifth">
               <picture>
-                <source srcset="img/320/gallery-slider-img5-320.jpg" media="(max-width: 320px)">
+                <source srcset="img/320/gallery-slider-img5-320.jpg" media="(max-width: 576px)">
                 <source srcset="img/768/gallery-slider-img5-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/gallery-slider-img5-1024.jpg" media="(max-width: 1024px)">
                 <img class="swiper-gallery__image swiper-gallery__image--img"
@@ -407,7 +408,7 @@
             </button>
             <button class="swiper-slide swiper-gallery__slide" data-graph-path="sixth">
               <picture>
-                <source srcset="img/320/gallery-slider-img6-320.jpg" media="(max-width: 320px)">
+                <source srcset="img/320/gallery-slider-img6-320.jpg" media="(max-width: 576px)">
                 <source srcset="img/768/gallery-slider-img6-768.jpg" media="(max-width: 768px)">
                 <source srcset="img/1024/gallery-slider-img6-1024.jpg" media="(max-width: 1024px)">
                 <img class="swiper-gallery__image swiper-gallery__image--img"
@@ -584,7 +585,7 @@
                     <li class="accordion-catalog__item"><a class="accordion-catalog__tabs-btn" href="#default"
                         data-path="default">Андреа Верроккьо</a>
                     </li>
-                    <li class="accordion-catalog__item"><a class="accordion-catalog__tabs-btn"
+                    <li class="accordion-catalog__item"><a class="accordion-catalog__tabs-btn accordion-catalog__tabs-btn--active"
                         href="#domenico-ghirlandaio" data-path="domenico-ghirlandaio">Доменико
                         Гирландайо</a></li>
                     <li class="accordion-catalog__item"><a class="accordion-catalog__tabs-btn" href="#default"
@@ -1247,9 +1248,7 @@
       </div>
     </div>
   </div>
-  <script src="libs/inputmask.min.js"></script>
-  <script src="libs/just-validate.min.js"></script>
-  <script src="js/validation-contacts.js"></script>
+  
 </body>
 
 </html>

@@ -1,5 +1,17 @@
 @media (max-width: 1440px) {
 
+  /* gallery */
+
+  .gallery__container {
+    -webkit-box-pack: normal;
+        -ms-flex-pack: normal;
+            justify-content: normal;
+  }
+
+  .swiper-gallery {
+    max-width: 594px;
+  }
+
   /* contacts-1440 */
 
   .contacts__container {
@@ -1327,6 +1339,7 @@
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     padding-top: 0;
+    max-width: 290px;
     height: 419px;
   }
 

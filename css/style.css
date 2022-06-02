@@ -86,6 +86,17 @@ ul {
   list-style-type: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 h3 {
   margin: 0;
   margin-bottom: 16px;
@@ -773,6 +784,7 @@ h4 {
   line-height: 25px;
   color: var(--main-color);
   background-color: var(--hover-color);
+  outline: 2px solid transparent;
   -webkit-transition-property: background-color, outline, outline-offset;
   -o-transition-property: background-color, outline, outline-offset;
   transition-property: background-color, outline, outline-offset;
@@ -785,7 +797,7 @@ h4 {
 }
 
 .hero__link:focus-within {
-  outline: 2px solid #C283F3;
+  outline-color: #C283F3;
   outline-offset: 5px;
 }
 
@@ -1097,20 +1109,20 @@ h4 {
   transition: fill .3s ease-in-out;
 }
 
-.swiper-gallery__button:hover:not(:focus-visible) {
+.swiper-gallery__button:hover:not(:focus-visible):not(.swiper-button-disabled) {
   outline: 2px solid var(--hover-color);
 }
 
-.swiper-gallery__button:hover:not(:focus-visible) svg path {
+.swiper-gallery__button:hover:not(:focus-visible):not(.swiper-button-disabled) svg path {
   fill: var(--hover-color);
 }
 
-.swiper-gallery__button:focus-visible,
-.swiper-gallery__button:active:not(:focus-visible) {
+.swiper-gallery__button:focus-visible:not(.swiper-button-disabled),
+.swiper-gallery__button:active:not(:focus-visible):not(.swiper-button-disabled) {
   outline: 2px solid #000;
 }
 
-.swiper-gallery__button:active:not(:focus-visible) svg path {
+.swiper-gallery__button:active:not(:focus-visible):not(.swiper-button-disabled) svg path {
   fill: var(--active-color);
 }
 
@@ -1398,6 +1410,10 @@ h4 {
   -webkit-transition-timing-function: ease-in-out;
        -o-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
+}
+
+.accordion-catalog__tabs-btn--active {
+  color: var(--active-color);
 }
 
 .accordion-catalog__tabs-btn:focus-visible {
@@ -2157,8 +2173,6 @@ h4 {
 }
 
 .contacts__bottom-block {
-  margin: 0 auto;
-  max-width: 1920px;
   height: 701px;
 }
 
@@ -2173,7 +2187,8 @@ h4 {
 }
 
 .form-contacts__btn:focus-visible {
-  outline: 2px solid #C283F3;
+  border: 3px solid var(--hover-color);
+  outline-color: #C283F3;
   outline-offset: 5px;
 }
 

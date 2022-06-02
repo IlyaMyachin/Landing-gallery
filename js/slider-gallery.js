@@ -30,15 +30,15 @@ let gallerySwiper = new Swiper('.swiper-gallery', {
       spaceBetween: 0,
     },
 
-    576: {
+    577: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 38,
     },
 
-    1024: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
+    1441: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
       spaceBetween: 34,
     },
 
