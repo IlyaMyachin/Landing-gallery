@@ -1666,21 +1666,8 @@
   .form-contacts__btn--mobile {
     display: block;
     padding: 13px 35px 11px 35px;
-    outline: 2px solid var(--hover-color);
-    outline-offset: -2px;
-    border-radius: 100px;
     font-size: 12px;
     line-height: 16px;
-    color: var(--hover-color);
-    -webkit-transition-property: color, background-color, outline, outline-offset;
-    -o-transition-property: color, background-color, outline, outline-offset;
-    transition-property: color, background-color, outline, outline-offset;
-    -webkit-transition-duration: .3s;
-         -o-transition-duration: .3s;
-            transition-duration: .3s;
-    -webkit-transition-timing-function: ease-in-out;
-         -o-transition-timing-function: ease-in-out;
-            transition-timing-function: ease-in-out;
   }
 
   .contacts__bottom-block {
