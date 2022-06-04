@@ -2132,7 +2132,8 @@ h4 {
   border-color: #D11616;
 }
 
-.form-contacts__btn {
+.form-contacts__btn,
+.form-contacts__btn--mobile {
   padding: 14px 36px 11px 36px;
   outline: 2px solid var(--hover-color);
   outline-offset: -2px;
